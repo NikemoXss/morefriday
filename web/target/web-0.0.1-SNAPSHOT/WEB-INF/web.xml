@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         id="WebApp_ID" version="3.0">
+
+    <!-- icon元素指出IDE和GUI工具用来表示Web应用的一个和两个图像文件的位置。 -->
+    <icon></icon>
+
+    <!-- display-name元素提供GUI工具可能会用来标记这个特定的Web应用的一个名称。 -->
+    <display-name></display-name>
+
+    <!-- description元素给出与此有关的说明性文本。 -->
+    <description></description>
+
+
+
+</web-app>

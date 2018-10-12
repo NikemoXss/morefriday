@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>邮件模板</title>
+</head>
+<body>
+        你好，这是一封验证邮件，请点击连接完成注册<br/>
+        <a href="#" th:href="@{http://www.test.com/{id}(id=${id})}">点击激活22</a>
+        <img src="http://pic22.photophoto.cn/20120309/0005018327703583_b.jpg">
+</body>
+</html>
