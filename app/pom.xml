@@ -9,18 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>enter</artifactId>
-<dependencies>
+    <artifactId>app</artifactId>
 
-    <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-openfeign</artifactId>
-    </dependency>
-    <dependency>
-        <groupId>com.more</groupId>
-        <version>0.0.1-SNAPSHOT</version>
-        <artifactId>model</artifactId>
-    </dependency>
-</dependencies>
 
 </project>

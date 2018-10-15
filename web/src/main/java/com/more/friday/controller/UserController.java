@@ -14,8 +14,8 @@ import java.util.Collection;
 @RestController
 public class UserController {
 
-//    @Autowired
-//    private UserJpaRepository jpauserRepository;
+    @Autowired
+    private UserJpaRepository jpauserRepository;
 
     private  final UserRepository userRepository;
 
@@ -41,17 +41,17 @@ public class UserController {
     }
 
 
-//    @RequestMapping(value = "/person/findbyid")
-//    public String test(Integer id){
-//        User us=jpauserRepository.findById(id);
-//        if(us!=null){
-//            System.out.print(us.toString());
-//            return us.getName()+"--------";
-//        }else {
-//            return "未查询到数据";
-//        }
-//
-//    }
+    @PostMapping(value = "/person/findbyid")
+    public String test(Integer id){
+        User us=jpauserRepository.findById(id);
+        if(us!=null){
+            System.out.print(us.toString());
+            return us.getName()+"--------";
+        }else {
+            return "未查询到数据";
+        }
+
+    }
 
     @RequestMapping(value = "/person/findbyids")
     public String test1(){
