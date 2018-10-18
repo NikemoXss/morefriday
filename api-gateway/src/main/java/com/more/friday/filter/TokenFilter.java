@@ -34,19 +34,19 @@ public class TokenFilter extends ZuulFilter {
         System.out.println("getRequestURL :"+request.getRequestURL());
         System.out.println("getLocalName :"+request.getLocalName());
         String token = request.getParameter("name");
-        if(token == null) {
-            ctx.setSendZuulResponse(false);
-            ctx.setResponseStatusCode(401);
-            try {
-                ctx.getResponse().setCharacterEncoding("UTF-8");
-                ctx.getResponse().getWriter().write("禁止访问");
-            } catch (Exception e){
-                return null;
-            }
-        }else {
-            ctx.setSendZuulResponse(true);
-            ctx.setResponseStatusCode(200);
-        }
+//        if(token == null) {
+//            ctx.setSendZuulResponse(false);
+//            ctx.setResponseStatusCode(401);
+//            try {
+//                ctx.getResponse().setCharacterEncoding("UTF-8");
+//                ctx.getResponse().getWriter().write("禁止访问");
+//            } catch (Exception e){
+//                return null;
+//            }
+//        }else {
+//            ctx.setSendZuulResponse(true);
+//            ctx.setResponseStatusCode(200);
+//        }
         return null;
     }
 }

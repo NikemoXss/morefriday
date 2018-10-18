@@ -5,7 +5,8 @@ import com.more.friday.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collection;
+import java.util.Map;
+
 
 @RestController
 public class UserController {
@@ -33,6 +34,12 @@ public class UserController {
     public String test4(@RequestParam Integer id){
         String ss=  feignUserClient.test4(id);
         return "44444;;;"+ss;
+
+    }
+    @RequestMapping("/ws/sendmsg")
+    public String test5(@RequestParam String name){
+        String ss=  feignUserClient.test5(name);
+        return "test;;;"+ss.toString();
 
     }
 }

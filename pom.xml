@@ -14,6 +14,7 @@
 		<module>api-gateway</module>
 		<module>enter</module>
 		<module>app</module>
+		<module>ws</module>
 	</modules>
     <packaging>pom</packaging>
 
