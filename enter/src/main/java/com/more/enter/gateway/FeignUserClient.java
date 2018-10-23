@@ -20,4 +20,9 @@ public interface FeignUserClient {
     String test4(@RequestParam("id") Integer id);
     @RequestMapping(value = "/ws/sendmsg",method = RequestMethod.GET)
     String test5(@RequestParam("name") String name);
+    @RequestMapping(value = "/ws/tootherhtml",method = RequestMethod.GET)
+    String test6(@RequestParam("id") String id);
+
+    @RequestMapping(value = "/ws/tosecondhtml",method = RequestMethod.GET)
+    String test7();
 }

@@ -3,13 +3,14 @@
 <head>
     <title>websocket</title>
     <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"></script>
-    <script src="http://cdn.bootcss.com/stomp.js/2.3.3/stomp.min.js"></script>
-    <script src="https://cdn.bootcss.com/sockjs-client/1.1.4/sockjs.min.js"></script>
+    <script src="../js/sockjs.min.js"></script>
+    <script src="../js/stomp.min.js"></script>
 </head>
  
 <body>
     <div style="margin: auto;text-align: center">
-        <h1>Welcome to websocket</h1>
+        <h1 onclick="toOtherHtml()">Welcome to websocket</h1>
+        <a href="tootherhtml?id=1234">hahahah</a>
     </div>
     <br/>
     <div style="margin: auto;text-align: center">
@@ -126,6 +127,15 @@
         webSocket.send(JSON.stringify(message));
         $("#text").val("");
  
+    }
+    function toOtherHtml() {
+        // $.ajax({
+        //     url:"tosecondhtml",
+        //     dataType:"json",
+        //     contentType:"text/html;charset=UTF-8"
+        // });
+
+        window.location.href="/ws/tosecondhtml";
     }
 </script>
  

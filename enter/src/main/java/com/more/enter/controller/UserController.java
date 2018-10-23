@@ -39,7 +39,19 @@ public class UserController {
     @RequestMapping("/ws/sendmsg")
     public String test5(@RequestParam String name){
         String ss=  feignUserClient.test5(name);
-        return "test;;;"+ss.toString();
+        return ss.toString();
 
+    }
+
+    @RequestMapping("/ws/tootherhtml")
+    public String test6(@RequestParam("id") String id){
+        String ss=  feignUserClient.test6(id);
+        return ss.toString();
+    }
+
+    @RequestMapping("/ws/tosecondhtml")
+    public String test7(){
+        String ss=  feignUserClient.test7();
+        return ss.toString();
     }
 }
