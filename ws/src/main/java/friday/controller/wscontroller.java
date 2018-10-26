@@ -1,5 +1,6 @@
 package friday.controller;
 
+import friday.model.User;
 import friday.websocket.WebSocketServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +12,9 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -36,8 +39,21 @@ public class wscontroller {
     public String toOtherHtml(@RequestParam String id,Model model){
         try{
             logger.info("otherHtml;;"+id);
+            User user1=new User();
+            user1.setId("1");
+            user1.setName( "张三" );
+            user1.setAge( 20 );
+
+            User user2=new User();
+            user2.setId("2");
+            user2.setName( "王五" );
+            user2.setAge( 22 );
+            List<User> list=new ArrayList<User>(  );
+            list.add( user1 );
+            list.add( user2 );
+            model.addAttribute( "list",list );
             model.addAttribute("myid",id);
-            return "redirect:otherpage";
+            return "otherpage";
         }
         catch (Exception e){
             logger.info("跳转到otherHtml的页面上发生异常，异常信息是："+e.getMessage());

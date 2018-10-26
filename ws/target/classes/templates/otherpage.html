@@ -8,6 +8,13 @@
 <body>
 <input  type="text" th:value="${myid}" id="username"  />
 <div th:text="${myid}" ></div>
+<table>
+    <tr th:each="user:${list}">
+        <td th:text="${user.id}">1</td>
+        <td th:text="${user.name}">heh3</td>
+        <td th:text="${user.age}">22</td>
+    </tr>
+</table>
 </body>
 
 

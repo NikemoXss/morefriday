@@ -2,15 +2,15 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <title>websocket</title>
-    <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js"></script>
-    <script src="../js/sockjs.min.js"></script>
-    <script src="../js/stomp.min.js"></script>
+    <script type="text/javascript" th:src="@{http://ajax.microsoft.com/ajax/jquery/jquery-1.4.min.js}"></script>
+    <script th:src="@{../static/js/sockjs.min.js}"></script>
+    <script th:src="@{../static/js/stomp.min.js}"></script>
 </head>
  
 <body>
     <div style="margin: auto;text-align: center">
         <h1 onclick="toOtherHtml()">Welcome to websocket</h1>
-        <a href="tootherhtml?id=1234">hahahah</a>
+        <a th:href="@{tootherhtml?id=1234}">hahahah</a>
     </div>
     <br/>
     <div style="margin: auto;text-align: center">

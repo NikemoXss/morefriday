@@ -1,0 +1,5 @@
+friday\websocket\WebSocketServer.class
+friday\WsApplication.class
+friday\config\WebSocketConfig.class
+friday\controller\wscontroller.class
+friday\model\User.class
