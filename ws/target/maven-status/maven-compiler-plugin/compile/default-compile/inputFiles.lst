@@ -1,5 +1,5 @@
-G:\friday\morefriday\ws\src\main\java\friday\websocket\WebSocketServer.java
-G:\friday\morefriday\ws\src\main\java\friday\config\WebSocketConfig.java
-G:\friday\morefriday\ws\src\main\java\friday\model\User.java
-G:\friday\morefriday\ws\src\main\java\friday\WsApplication.java
-G:\friday\morefriday\ws\src\main\java\friday\controller\wscontroller.java
+G:\friday\morefriday\ws\src\main\java\com\more\friday\model\User.java
+G:\friday\morefriday\ws\src\main\java\com\more\friday\websocket\WebSocketServer.java
+G:\friday\morefriday\ws\src\main\java\com\more\friday\WsApplication.java
+G:\friday\morefriday\ws\src\main\java\com\more\friday\config\WebSocketConfig.java
+G:\friday\morefriday\ws\src\main\java\com\more\friday\controller\wscontroller.java

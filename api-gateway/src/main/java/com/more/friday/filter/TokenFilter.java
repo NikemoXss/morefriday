@@ -23,7 +23,8 @@ public class TokenFilter extends ZuulFilter {
 
     @Override
     public boolean shouldFilter() {
-        return true;
+        return RequestContext.getCurrentContext().getRouteHost() != null
+                && RequestContext.getCurrentContext().sendZuulResponse();
     }
 
     @Override

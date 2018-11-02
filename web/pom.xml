@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 <!-- 默认是jar的打包方式  改成war的形式-->
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <artifactId>web</artifactId>
 
  <dependencies>

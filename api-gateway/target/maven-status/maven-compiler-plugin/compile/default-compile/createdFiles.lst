@@ -1,2 +1,4 @@
-com\more\friday\filter\TokenFilter.class
 com\more\friday\ApiGatewayApplication.class
+com\more\friday\Config\WebConfig.class
+com\more\friday\filter\TokenFilter.class
+com\more\friday\controller\UserController.class

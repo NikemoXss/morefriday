@@ -3,15 +3,16 @@ package com.more.enter.controller;
 import com.more.enter.gateway.FeignUserClient;
 import com.more.friday.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
-
+//https://www.cnblogs.com/wryu/p/7327298.html
 @RestController
 public class UserController {
     @Autowired
-    private FeignUserClient feignUserClient;
+     private  FeignUserClient feignUserClient;
     @RequestMapping(value = "/person/fe")
     public String test1(){
       String ss=  feignUserClient.test1();
@@ -36,7 +37,7 @@ public class UserController {
         return "44444;;;"+ss;
 
     }
-    @RequestMapping("/ws/sendmsg")
+    @RequestMapping(value = "/ws/sendmsg",method = RequestMethod.GET, produces = "application/json; charset=UTF-8")
     public String test5(@RequestParam String name){
         String ss=  feignUserClient.test5(name);
         return ss.toString();
