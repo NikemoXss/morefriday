@@ -18,10 +18,10 @@ public interface FeignUserClient {
     User test3(@RequestParam(value = "name") String name);
     @RequestMapping(value = "/web/person/findbyid",method = RequestMethod.POST)
     String test4(@RequestParam(value = "id") Integer id);
-    @RequestMapping(value = "/sendmsg",method = RequestMethod.GET)
+    @RequestMapping(value = "/ws/sendmsg",method = RequestMethod.GET)
     String test5(@RequestParam(value = "name") String name);
     @RequestMapping(value = "/ws/tootherhtml",method = RequestMethod.GET)
     String test6(@RequestParam(value = "id") String id);
-    @RequestMapping(value = "/tosecondhtml",method = RequestMethod.GET)
+    @RequestMapping(value = "/ws/tosecondhtml",method = RequestMethod.GET)
     String test7();
 }
