@@ -2,3 +2,4 @@ com\more\friday\model\User.class
 com\more\friday\controller\wscontroller.class
 com\more\friday\WsApplication.class
 com\more\friday\websocket\WebSocketServer.class
+com\more\friday\config\WebSocketConfig.class

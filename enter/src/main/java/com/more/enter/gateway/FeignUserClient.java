@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(value = "api-gateway", url = "http://localhost:8099/")
+@FeignClient(value = "api-gateway", url = "${gateway.url}")
 public interface FeignUserClient {
     @RequestMapping(value = "/web/person/findbyids",method = RequestMethod.GET)
     String test1();

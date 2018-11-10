@@ -37,7 +37,7 @@ public class UserController {
         return "44444;;;"+ss;
 
     }
-    @RequestMapping(value = "/ws/sendmsg",method = RequestMethod.GET, produces = "application/json; charset=UTF-8")
+    @RequestMapping(value = "/ws/sendmsg",method = RequestMethod.GET)
     public String test5(@RequestParam String name){
         String ss=  feignUserClient.test5(name);
         return ss.toString();
