@@ -15,6 +15,7 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 @EnableZuulProxy
 @ServletComponentScan
+@EnableDiscoveryClient
 public class ApiGatewayApplication extends SpringBootServletInitializer {
     public static void main(String[] args) {
         SpringApplication.run(ApiGatewayApplication.class, args);

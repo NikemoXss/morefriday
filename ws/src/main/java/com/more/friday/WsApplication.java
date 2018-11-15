@@ -7,12 +7,14 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.servlet.support.ErrorPageFilter;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 
 @EnableFeignClients
 @SpringBootApplication
 @ServletComponentScan
+@EnableDiscoveryClient
 public class WsApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
