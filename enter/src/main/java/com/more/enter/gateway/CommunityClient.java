@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-@Component
+
 @FeignClient(value = "communityClient", url = "${gateway.url}")
 public interface CommunityClient {
     @RequestMapping(value = "/web/person/findbyids",method = RequestMethod.GET)
