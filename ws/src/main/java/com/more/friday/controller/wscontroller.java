@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.lang.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-@RequestMapping(value = "/")
 @Controller
 public class wscontroller {
     Logger logger =  LoggerFactory.getLogger(this.getClass());
