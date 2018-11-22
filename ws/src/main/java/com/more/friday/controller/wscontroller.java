@@ -69,4 +69,51 @@ public class wscontroller {
         }
     }
 
+    @RequestMapping(value = "/index",method = RequestMethod.GET)
+    public String index(){
+        try{
+            logger.info("index;;");
+            return "index";
+        }
+        catch (Exception e){
+            logger.info("index："+e.getMessage());
+            return "error";
+        }
+    }
+
+    @RequestMapping(value = "/about",method = RequestMethod.GET)
+    public String about(){
+        try{
+            logger.info("about;;");
+            return "about";
+        }
+        catch (Exception e){
+            logger.info("about："+e.getMessage());
+            return "error";
+        }
+    }
+
+    @RequestMapping(value = "/news",method = RequestMethod.GET)
+    public String news(){
+        try{
+            logger.info("news;;");
+            return "news";
+        }
+        catch (Exception e){
+            logger.info("news："+e.getMessage());
+            return "error";
+        }
+    }
+
+    @RequestMapping(value = "/product",method = RequestMethod.GET)
+    public String product(){
+        try{
+            logger.info("product;;");
+            return "product";
+        }
+        catch (Exception e){
+            logger.info("product："+e.getMessage());
+            return "error";
+        }
+    }
 }

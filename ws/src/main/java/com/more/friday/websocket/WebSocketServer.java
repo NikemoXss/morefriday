@@ -3,8 +3,7 @@ package com.more.friday.websocket;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.google.common.collect.Maps;
-import com.more.friday.domain.User;
-import com.more.friday.repository.UserJpaRepository;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +24,6 @@ import java.util.concurrent.ConcurrentHashMap;
 @ServerEndpoint("/websocket/{username}")
 public class WebSocketServer {
     private Logger logger =  LoggerFactory.getLogger(this.getClass());
-    @Autowired
-    private UserJpaRepository jpauserRepository;
     /**
      * 在线人数
      */
@@ -126,12 +123,11 @@ public class WebSocketServer {
             String fromusername = jsonObject.getString("username");
             String tousername = jsonObject.getString("to");
 
-            User us=jpauserRepository.findById(12);
             //如果不是发给所有，那么就发给某一个人
             //messageType 1代表上线 2代表下线 3代表在线名单  4代表普通消息
             Map<String,Object> map1 = Maps.newHashMap();
             map1.put("messageType",4);
-            map1.put("textMessage",textMessage+";;;;"+us.getName());
+            map1.put("textMessage",textMessage);
             map1.put("fromusername",fromusername);
             if(tousername.equals("All")){
                 map1.put("tousername","所有人");
