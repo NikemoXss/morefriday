@@ -94,9 +94,9 @@ public class wscontroller {
     }
 
     @RequestMapping(value = "/news",method = RequestMethod.GET)
-    public String news(){
+    public String news(@RequestParam String id,Model model){
         try{
-            logger.info("news;;");
+            logger.info("news;;"+id);
             return "news";
         }
         catch (Exception e){
